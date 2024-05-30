@@ -3,19 +3,19 @@ using System.Threading;
 
 class Program
 {
+    private static int myAge = 18; // Declare 'myAge' as static field
+    private static float myHeight = 1.6509f; // Declare 'myHeight' as static field
+    private static string myName = "Manuel Otero Jr."; // Declare 'myName' as static field
+    public static string favColor = "purple"; // Declare 'favColor' as static field
+    private static bool isTuesday = true; // Declare 'isTuesday' as static field
+    private static bool isWednesday = false; // Declare 'isWednesday' as static field
+    private static bool isThursday = false; // Declare 'isThursday' as static field
+    private static Random rand = new Random(); // Declare 'rand' as static field
+    private static string[] favGames = {"Kirby Star Allies", "Honkai: Star Rail", "Super Smash Bros. Ultimate", "Dr. Robotnik's Ring Racers"}; // Declare 'favGames' as static field
+
     static void Main(string[] args)
     {
-        Random rand = new Random();
-
-        int myAge = 18;
-        float myHeight = 1.6509f;
-        string myName = "Manuel Otero Jr.";
-        string favColor = "purple";
-        bool isTuesday = true;
-        bool isWednesday = false;
-        bool isThursday = false;
         int dayNumber = rand.Next(1, 101); // Generate a random integer between 1 and 100
-        int time = 0;
 
         Console.WriteLine("Hello, world! This script was made by " + myName + "! He is " + myAge + " years old, " + myHeight + " meters tall, and his favorite color is " + favColor + "!");
 
@@ -27,7 +27,7 @@ class Program
         {
             Console.WriteLine("It's Wednesday! Nothing beats a relaxing Lab Day!");
         }
-        else if (isThursday)
+        else
         {
             Console.WriteLine("It's Thursday, the second day of the program!");
         }
@@ -41,15 +41,10 @@ class Program
             Console.WriteLine("Today's number of the day is " + dayNumber + ". That's a pretty low number!");
         }
 
-        //for (time < 1; time++)
-        //{
-        //    Console.WriteLine("This program has been running for " + time + " seconds!");
-        //    Thread.Sleep(1000);
-        //}
-        //for (time > 1; time++)
-        //{
-       //     Console.WriteLine(time + " seconds!");
-       //     Thread.Sleep(1000);
-       //}
+        for (int i = 0; i < 4; i++) // Changed '5' to '4' as there are only 4 elements in favGames array
+        {
+            Console.WriteLine(favGames[i]); // Added semicolon at the end
+        }
     }
 }
+
